@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@media screen and (max-width:1024px) {
+    #header #nav {
+        position:fixed; top:0px; transform:translateY(0%);
+        left:100%; right: 0px; font-size:18px; color:#1e1e1e;
+        background: rgba(0,0,0,.5); bottom: 0; overflow-y: auto; overflow-x: hidden;
+    }
+    #header #nav .depth1 {
+        position:absolute; width: 200px; background: #fff;  padding-top: 50px; top: 0; bottom: 0; right: -200px;
+        height: 100%;
+    }
+    #header #nav .depth1 > li { float:none; position:relative; }
+    #header #nav .depth1 > li > a { padding:20px 40px; display:block; text-align: center;}
+    #header #nav .depth1 > li:hover > a { color: #00529b; }
+    #header .depth2 { position:static; top:100%; left:0; 
+        background:#555; font-size:14px;
+        color:#fff; width:100%; text-align:center; 
+        display:none; }
+    
+    #header .opennav { display: block; position: absolute; top: 50%; transform: translateY(-50%); 
+        right: 20px; font-size: 30px; transition: all .3s;
+    }
+    #header .opennav.on {position: fixed; 
+        top: 20px; transform: translateY(0%); right: 20px; z-index: 99999999;
+    }
+    /* 검색창 */
+    #header .search {
+        font-size: 30px;
+        position:fixed; 
+        right:70px;
+        top:60px; 
+        transform:translateY(0);
+        z-index: 99;
+    }
+    #header .search #sbox { border:none; text-indent:1em; width:0px;
+        overflow:hidden; outline:none; transition:all .2s; height: 30px;
+        position: absolute; top: 0px; right: 50px;
+    }
+    #header .search.on #sbox {
+        width: 300px; border:1px solid #000;
+    }
+
+    /* 슬라이드 구역 */
+    .article1 .slick-dots li {display: inline-block; margin:0 5px;
+        width: 80px; height: 2px; background: #999; position: relative;
+    }
+    .article1 .slick-dots li.slick-active button { 
+        width: 80px;
+        transition: all 2s;
+    }
+    .article1 .plpa {
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(140px);
+        
+    }    
+    .article5 .row > div { width:100%; float:left; }
+    .article5 .row > div.cs_center {  padding: 30px; margin: 30px 0; border: 1px solid #ddd; text-align: center;}
+    .article5 .row > div.cs_board { padding-right:0px; }
+    .article5 .cs_center li::before {display: none;}
+    .article5 .row div.cs_movie { padding-left:0px; 
+        text-align: center;
+    }
+
+    .youtubeVideoInner {top: 25%!important ;}
+
+    #footer .info span { padding:5px 20px; 
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    #header .search.on #sbox {
+        top: 63px; right: 0px;
+    }
+    #section .article1 .slick-slide .slide_text h2 { font-size: 26px; line-height: 25px;
+        font-weight: 800; transform: translateY(0); opacity: 1;
+        transition: unset;
+    }
+    .article1 .slick-slide .slide_text p {display:none
+    }
+
+    .article2 li:hover > div { bottom:40px;  }
+
+    .article2 li { height:280px; float:left; width:49%; color:#fff; margin-right: 0;
+        position:relative; 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        transition: all 1s;
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+    .article2 li:nth-child(odd) {
+        margin-right:2%;
+    }
+
+    .article1 .slide { height: 350px; background-size:cover; position:relative; } 
+    .article2 li:nth-child(1) { background-image:url(../img/what1.jpg); transform: translate(0%,0); }
+    .article2 li:nth-child(2) { background-image:url(../img/what2.jpg); transform: translate(0%,0); }
+    .article2 li:nth-child(3) { background-image:url(../img/what3.jpg); transform: translate(0%,0); }
+    .article2 li:nth-child(4) { background-image:url(../img/what4.jpg); margin-right:0; transform: translate(0%,0); }
+
+    .article2 li > div { text-align: center; bottom:30% }
+    .article2 li:hover > div { bottom:35%;  }
+
+    .article2 li > div > p { display: none; }
+
+    .article2 li > div > a {  display: inline-block; padding: 10px 20px;
+        border: 1px solid rgba(255,255,255,0.5); font-size: 11px; font-weight: 600 !important;
+        margin-top: 15px;
+    }
+
+    #section h2 {
+        font-size: 24px;
+        padding:30px 0 10px;
+    }
+    .article3 {margin-top: 30px; padding: 50px 0;}
+
+    .article4 li {
+        float:left; width:49%;
+        margin-right:0%;
+        margin-bottom:20px; 
+        border:1px solid #999;
+        text-align:center;
+        transform: scale(1); 
+        opacity: 1;
+    }
+    .article4 li:nth-child(2n+1) {
+        margin-right:2% ;
+    }
+    /* .article4 li:nth-child(odd) {
+        margin-right:2% ;
+    } 
+    이것도 사용가능 (홀수번호 li한테만 margin-right주기
+    */
+
+    .article4 li p { display: none; }
+
+    
+
+}
